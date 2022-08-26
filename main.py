@@ -56,9 +56,9 @@ def translate(source, translator, sp_source_model, sp_target_model):
 
 @st.cache(allow_output_mutation=True)
 def load_models(source_len, target_len, domain):
-    ct_model_path = "C:/Users/matte/OneDrive/Desktop/app_traduzione/model/"+domain+"/"+source_len+"_"+target_len
-    sp_source_model_path = "C:/Users/matte/OneDrive/Desktop/app_traduzione/model/vocab_model/"+source_len+".model"
-    sp_target_model_path = "C:/Users/matte/OneDrive/Desktop/app_traduzione/model/vocab_model/"+target_len+".model"
+    ct_model_path = "https://github.com/MatteoTambuscio/TranslatorApp/tree/main/model/model"+domain+"/"+source_len+"_"+target_len
+    sp_source_model_path = "https://github.com/MatteoTambuscio/TranslatorApp/tree/main/model/vocab_model"+source_len+".model"
+    sp_target_model_path = "https://github.com/MatteoTambuscio/TranslatorApp/tree/main/model/vocab_model"+target_len+".model"
 
     translator = ctranslate2.Translator(ct_model_path)
     sp_source_model = spm.SentencePieceProcessor(sp_source_model_path)
