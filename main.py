@@ -2,7 +2,7 @@ import streamlit as st
 import sentencepiece as spm
 import ctranslate2
 from nltk import sent_tokenize
-#from trueCaser import true_text
+from trueCaser import true_text
 #import deepl
 #translator_deep = deepl.Translator("074d5d22-b571-4e24-61af-361aacd3234f:fx")
 #import nltk
@@ -119,7 +119,7 @@ text = text_area.text_area("Translation", height=200, max_chars=5000)
 
 
 if submitted:
-     text = text_area.text_area("Translation", translation, height=200, max_chars=5000, on_change=call_2, key='cic')
+     text = text_area.text_area("Translation", true_text(translation, target_len), height=200, max_chars=5000, on_change=call_2, key='cic')
 
 
 if clear:
