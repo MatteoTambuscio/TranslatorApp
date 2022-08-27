@@ -130,8 +130,8 @@ done = right_column3.button("Done")
 if done:
         text_input = sent_tokenize(user_input)
         text_output = sent_tokenize(st.session_state['sen'])
-        path = "corpus/"+source_len+"_"+target_len+"_"+domain
-        text = open(path, 'a')
+        path = "corpus/en_it_general"    #+source_len+"_"+target_len+"_"+domain
+        text = open(path, 'w')
         for i, j in zip(text_input, text_output):
             text.write(i+"\t "+j+"\n")
 
