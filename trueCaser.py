@@ -1,10 +1,10 @@
-"""import stanza
+import stanza
 
 # processors={"pos":"combined"}
 #stanza.download('en', processors=["pos", "tokenize", "mwt"], model_dir='https://github.com/MatteoTambuscio/TranslatorApp/tree/main/resources_en/') #processors={"tokenize":"mwt"}, model_dir='resources_en/')
 #stanza.download('it', processors=["pos", "tokenize", "mwt"], model_dir='https://github.com/MatteoTambuscio/TranslatorApp/tree/main/resources_it/') #processors="tokenize", package="ewt", model_dir='resources_it/')
-nlp = { "IT": stanza.Pipeline('it', model_dir="https://github.com/MatteoTambuscio/TranslatorApp/tree/main/resources_it", processors='pos,tokenize,mwt', download_method=None),
-        "EN": stanza.Pipeline('en', model_dir="https://github.com/MatteoTambuscio/TranslatorApp/tree/main/resources_en", processors='pos,tokenize,mwt', download_method=None) }
+nlp = { "IT": stanza.Pipeline('it', model_dir="resources_it", processors='pos,tokenize,mwt', download_method=None),
+        "EN": stanza.Pipeline('en', model_dir="resources_en", processors='pos,tokenize,mwt', download_method=None) }
 
 def true_text(text, target_len):
 
@@ -25,5 +25,4 @@ def true_text(text, target_len):
     output = " ".join(clean_text)
 
     return output
-"""
 
