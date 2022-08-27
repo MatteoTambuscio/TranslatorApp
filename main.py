@@ -118,7 +118,7 @@ text = text_area.text_area("Translation", height=200, max_chars=5000)
 
 
 if submitted:
-     text = text_area.text_area("Translation", true_text(translation, target_len), height=200, max_chars=5000, on_change=call_2, key='cic')
+     text = text_area.text_area("Translation", translation, height=200, max_chars=5000, on_change=call_2, key='cic')
 
 
 if clear:
