@@ -1,4 +1,4 @@
-import stanza
+"""import stanza
 
 # processors={"pos":"combined"}
 #stanza.download('en', processors=["pos", "tokenize", "mwt"], model_dir='https://github.com/MatteoTambuscio/TranslatorApp/tree/main/resources_en/') #processors={"tokenize":"mwt"}, model_dir='resources_en/')
@@ -25,5 +25,5 @@ def true_text(text, target_len):
     output = " ".join(clean_text)
 
     return output
-
+"""
 
