@@ -4,7 +4,7 @@ import ctranslate2
 from nltk import sent_tokenize
 from trueCaser import true_text
 #import deepl
-#translator_deep = deepl.Translator("074d5d22-b571-4e24-61af-361aacd3234f:fx")
+
 #import nltk
 #nltk.download('punkt')
 
