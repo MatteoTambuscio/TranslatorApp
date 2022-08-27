@@ -129,7 +129,7 @@ done = right_column3.button("Done")
 if done:
         text_input = sent_tokenize(user_input)
         text_output = sent_tokenize(st.session_state['sen'])
-        path = "C:/Users/matte/OneDrive/Desktop/tirocinio/corpus/corpus_"+source_len+"_"+target_len+"_"+domain
+        path = "https://github.com/MatteoTambuscio/TranslatorApp/tree/main/corpus/"+source_len+"_"+target_len+"_"+domain
         text = open(path, 'a')
         for i, j in zip(text_input, text_output):
             text.write(i+"\t "+j+"\n")
