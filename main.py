@@ -5,7 +5,7 @@ from nltk import sent_tokenize
 #from trueCaser import true_text
 #import deepl
 #translator_deep = deepl.Translator("074d5d22-b571-4e24-61af-361aacd3234f:fx")
-#nltk.download('punkt')
+nltk.download('punkt')
 
 if 'sen' not in st.session_state:
     st.session_state['sen'] = ""
