@@ -77,7 +77,7 @@ _max_width_()
 # Title for the page and icon
 #st.set_page_config(page_title="NMT")
 # Header
-st.title("Translator by Tambu")
+st.title("Tambu translator")
 
 # Form to add your items
 #with st.form("my_form"):
