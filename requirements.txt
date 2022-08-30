@@ -3,3 +3,4 @@ sentencepiece==0.1.96
 ctranslate2==2.21.1
 nltk==3.7
 stanza==1.4.0
+deepl
