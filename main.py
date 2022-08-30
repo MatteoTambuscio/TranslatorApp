@@ -4,7 +4,7 @@ import ctranslate2
 from nltk import sent_tokenize
 from trueCaser import true_text
 import deepl
-#translator_deep = deepl.Translator()
+translator_deep = deepl.Translator(st.secret['deepl_key'])
 #nltk.download('punkt')
 
 if 'sen' not in st.session_state:
