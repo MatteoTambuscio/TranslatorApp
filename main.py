@@ -4,6 +4,7 @@ import ctranslate2
 from nltk import sent_tokenize
 from trueCaser import true_text
 import deepl
+import nltk
 translator_deep = deepl.Translator(st.secrets['deepl_key'])
 nltk.download('punkt')
 
