@@ -70,7 +70,7 @@ def load_models(source_len, target_len, domain):
     sp_source_model = spm.SentencePieceProcessor(sp_source_model_path)
     sp_target_model = spm.SentencePieceProcessor(sp_target_model_path)
 
-    return translator, sp_source_model, sp_target_model
+    return translator, sp_source_model, sp_target_model  
 
 
 _max_width_()
