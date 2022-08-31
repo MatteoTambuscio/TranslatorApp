@@ -94,7 +94,7 @@ domain = right_column.selectbox(
 
 left_column2, right_column2 = st.columns(2)
 # Textarea to type the source text.
-user_input = left_column2.text_area("Source Text", height=250, max_chars=5000, key="user_input")
+user_input = left_column2.text_area("Source Text", height=300, max_chars=25000, key="user_input")
 
 # Load models
 if source_len != target_len:
@@ -113,11 +113,11 @@ submitted = left_column3.button("Translate")
 clear = central_column3.button("clear", on_click=clear_text, key="model_output")
 
 text_area = right_column2.empty()
-text = text_area.text_area("Translation", height=250, max_chars=5000)
+text = text_area.text_area("Translation", height=300, max_chars=25000)
 
 
 if submitted:
-     text = text_area.text_area("Translation", true_text(translation, target_len), height=250, max_chars=5000, on_change=call_2, key='traduzione')
+     text = text_area.text_area("Translation", true_text(translation, target_len), height=300, max_chars=25000, on_change=call_2, key='traduzione')
 
 
 if clear:
