@@ -101,7 +101,8 @@ if source_len != target_len:
 
    translator, sp_source_model, sp_target_model = load_models(source_len, target_len, domain)
 
-   translator, sp_source_model, sp_target_model = load_models(source_len, target_len, domain)
+   translation = translate(user_input.lower(), translator, sp_source_model, sp_target_model)
+
 
 
 # Create a button
