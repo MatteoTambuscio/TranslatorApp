@@ -3,7 +3,7 @@ import sentencepiece as spm
 import ctranslate2
 from nltk import sent_tokenize
 from trueCaser import true_text
-import deepl
+#import deepl
 #import nltk
 translator_deep = deepl.Translator(st.secrets['deepl_key'])
 #nltk.download('punkt')
@@ -57,14 +57,14 @@ def translate(source, translator, sp_source_model, sp_target_model):
 
 @st.cache(allow_output_mutation=True)
 def load_models(source_len, target_len, domain):
-    if domain != "Deepl":
-     ct_model_path = "model/"+domain+"/"+source_len+"_"+target_len
-     sp_source_model_path = "model/vocab_model/"+source_len+".model"
-     sp_target_model_path = "model/vocab_model/"+target_len+".model"
-    else:
+    #if domain != "Deepl":
+    ct_model_path = "model/"+domain+"/"+source_len+"_"+target_len
+    sp_source_model_path = "model/vocab_model/"+source_len+".model"
+    sp_target_model_path = "model/vocab_model/"+target_len+".model"
+   """ else:
      ct_model_path = "model/general/" + source_len + "_" + target_len
      sp_source_model_path = "model/vocab_model/" + source_len + ".model"
-     sp_target_model_path = "model/vocab_model/" + target_len + ".model"
+     sp_target_model_path = "model/vocab_model/" + target_len + ".model""""
 
     translator = ctranslate2.Translator(ct_model_path)
     sp_source_model = spm.SentencePieceProcessor(sp_source_model_path)
@@ -94,7 +94,7 @@ target_len = c_column.selectbox(
 # select the domain of the text
 domain = right_column.selectbox(
         "Select the model to use",
-        ("general", "marketing", "Deepl"))
+        ("general", "marketing"))
 
 left_column2, right_column2 = st.columns(2)
 # Textarea to type the source text.
@@ -103,10 +103,10 @@ user_input = left_column2.text_area("Source Text", height=250, max_chars=5000, k
 # Load models
 if source_len != target_len:
 
- # translator, sp_source_model, sp_target_model = load_models(source_len, target_len, domain)
+ translator, sp_source_model, sp_target_model = load_models(source_len, target_len, domain)
 
  # Translate with CTranslate2 model
-# if domain != "Deepl":
+#""" if domain != "Deepl":
   translator, sp_source_model, sp_target_model = load_models(source_len, target_len, domain)
   if domain != "Deepl":
    translation = translate(user_input.lower(), translator, sp_source_model, sp_target_model)
@@ -116,7 +116,7 @@ if source_len != target_len:
         tar = target_len+'-GB'
     else:
         tar = target_len
-    translation = translator_deep.translate_text(user_input.lower(), target_lang=tar).text
+    translation = translator_deep.translate_text(user_input.lower(), target_lang=tar).text"""
 
 # Create a button
 left_column3, central_column3, right_column3 = st.columns(3)
