@@ -6,7 +6,7 @@ from trueCaser import true_text
 #import deepl
 import nltk
 #translator_deep = deepl.Translator(st.secrets['deepl_key'])
-nltk.download('punkt')
+#nltk.download('punkt')
 
 if 'sen' not in st.session_state:
     st.session_state['sen'] = ""
